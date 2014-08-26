@@ -1,0 +1,44 @@
+/* 
+	Icons for categories
+*/
+.merchant-list .category
+{
+	float: left;
+	height: 30px;
+	width: 30px;
+	margin: 5px 5px 0 0;
+	color: #fff;
+}
+.merchant-list .category .circle
+{
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+	margin: 0px;
+}
+.merchant-list .category .circle i
+{	
+	position: relative;
+	top: 5px;
+	left: 8px;
+}
+.merchant-list .category .circle i.icon-shopping-cart,
+.merchant-list .category .circle i.icon-ticket
+{	
+	left: 7px;
+}
+
+.teal-bg
+{
+	background-color: rgb(25, 188, 185);
+}
+
+.orange-bg
+{
+	background-color: rgb(241, 90, 36);
+}
+
+.green-bg
+{
+	background-color: rgb(80, 185, 72);
+}

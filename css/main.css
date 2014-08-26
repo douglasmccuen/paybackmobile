@@ -119,19 +119,62 @@ body {
 	text-shadow: none;
 	background-color: #fff;
 }
-
+.page-container a {
+	color: rgb(18, 141, 139);
+}
 .cover-heading {
 	margin-bottom: 20px;
 }
 .button-container {
-	margin-top: 50px;
+	margin-top: 30px;
 }
 .button-container .btn {
 	margin: 0 2px;
+	color: #fff;
+}
+.page-container .inner.phone,
+.page-container .inner.dynamic-phone {
+	padding-right: 300px;
+	min-height: 575px;
 }
 .page-container .inner.phone {
-	background: url(/img/DealMock_vancouver3.png) no-repeat 565px 45px;
-	padding-right: 300px;
+	background: url(/img/mock_deal_vancouver.png) no-repeat 565px 45px;
+}
+.colorado .page-container .inner.phone {
+	background: url(/img/mock_deal_boulder.png) no-repeat 565px 45px;
+}
+.colorado.fundraiser .page-container .inner.phone {
+	background: url(/img/mock_activity_boulder.png) no-repeat 565px 45px;
+}
+.page-container .inner.dynamic-phone {
+	background: url(/img/mock_merchants.png) no-repeat 565px 45px;
+	position: relative;
+}
+
+.dynamic-phone .phone-container
+{
+	position: absolute;
+	right: 18px;
+	top: 193px;
+	width: 191px;
+}
+.dynamic-phone .phone-container .merchant-list .list-item 
+{
+	display: block;
+	padding: 5px;
+	border-bottom: 1px solid #efefef;
+	overflow: hidden;
+}
+.dynamic-phone .phone-container .merchant-list .list-item .title
+{
+	line-height: 35px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.merchant-list {
+	overflow: auto;
+	height: 242px;
+	font-size: 12px;
 }
 .page-container .inner {
 	padding: 40px 0;
@@ -150,6 +193,32 @@ body {
 {
 	font-size: 20px;
 }
+
+.list-container
+{
+	border: 1px solid #ddd;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.list-container.fundraiser
+{
+	max-height: 270px;
+}
+
+.list-container .list-item
+{
+	display: block;
+	color: rgb(18, 141, 139);
+	padding: 10px 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.list-container .list-item:hover
+{
+	background-color: rgba(18, 141, 139, .02);
+}
+
 /*
  * Footer
  */
