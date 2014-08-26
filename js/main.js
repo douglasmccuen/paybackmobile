@@ -1,7 +1,4 @@
-// TODO stop the scroll on hover
-// TODO show a loading spinner
 // TODO fix the messed up characters
-// TODO remove the merchant count from the image & create a bend and vancouver images
 
 window.payback = null;
 
@@ -34,10 +31,16 @@ $(function() {
 		 */
 		this.initFundraiserList = function(cobrand) {
 			var baseUrl = "http://talool.com/fundraiser/payback/"+cobrand+"/";
-			$(".list-container.fundraiser a.list-item").each(function(i){
-				var name = this.innerText.replace(/ /g,'').toLowerCase();
-				$(this).attr("href", baseUrl + name);
+			var list = $(".list-container.fundraiser");
+			$.getJSON('/js/fundraisers.json',function(data) {
+				var fundraisers = data[cobrand].sort();
+				$.each(fundraisers, function(i,item){
+					var nm = item.replace(/ /g,'').toLowerCase();
+					var link = "<a class='list-item' href='"+ baseUrl + nm + "'>" + item + "</a>";
+					list.append(link);
+				});
 			});
+			
 		};
 		
 		/*
