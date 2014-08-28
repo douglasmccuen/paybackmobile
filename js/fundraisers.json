@@ -29,7 +29,7 @@
 		"Monarch K - 8 School",
 		"Nevin Platt MS 7th Graders", 
 		"Superior Elementary", 
-		"Pioneer Elementary School", 
+		 
 		"Prairie Ridge Elementary", 
 		"Red Hawk Elementary", 
 		"Ryan Elementary", 
@@ -41,14 +41,19 @@
 		"New Vista High School", 
 		"Niwot High School - Band", 
 		"Niwot High School Choir", 
-		"St Thomas Aquinas Parish", 
+		
 		"St. Francis of Assisi Catholic Church", 
 		"Mountain Peak Private School", 
 		"Monarch High School DECA"
 	]	
 	,
 	"oregon": [
-		"R. E. Jewell Elementary"
+		"R. E. Jewell Elementary",
+		"Ponderosa Elementary",
+		"Pine Ridge Elementary",
+		"Highland Elementary",
+		"Bend High School Orchestra",
+		"Bend High School DECA"
 	]
 	,
 	"washington": [
@@ -64,9 +69,8 @@
 		"Camas High School", 
 		"Camas High School Choir", 
 		"Camas High School - Key Club", 
-		"Columbia Credit Union", 
 		"Columbia River HS Basketall", 
-		"Columbia River High School", 
+		"Columbia River High School DECA", 
 		"Columbia River HS Golf", 
 		"Capt Strong Elementary", 
 		"Chinook Elementary PTSA", 
@@ -98,6 +102,7 @@
 		"Mill Plain Elementary", 
 		"Minnehaha Elementary School", 
 		"Mt Pleasant School", 
+		"Pioneer Elementary School",
 		"Pleasant Valley Elementary", 
 		"Prune Hill Elementary", 
 		"Riverview Elementary School", 
@@ -110,7 +115,7 @@
 		"Woodburn Elementary", 
 		"York Elementary School", 
 		"Hosanna Christian School", 
-		"Hudson Bay High School", 
+		"Hudson Bay High School DECA", 
 		"Evergreen High School Band", 
 		"Excel Academic League", 
 		"Heritage High School - Band", 
@@ -121,12 +126,11 @@
 		"Miss Clark County Scholarship", 
 		"Molly Brandenburg Group", 
 		"Quan Ren", 
-		"Mountain View High School", 
 		"Pacific Crest Academy", 
 		"Ridgefield HS Choir", 
 		"River Homelink", 
 		"Riverside Christian School", 
-		"Skyview High School", 
+		"Skyview High School Robotic", 
 		"Sonshine Christian Daycare and Kindergart", 
 		"Soroptomists - Vancouver", 
 		"St Josephs Church", 
@@ -140,10 +144,10 @@
 		"Wyeast Middle School String Orchestra", 
 		"Union High School Band", 
 		"Evergreen High School Choir", 
-		"Evergreen High School", 
 		"Evergreen High School Dance", 
 		"Heritage High School - Choir", 
 		"Heritage High School - DECA", 
-		"Mountain View High School - Band"
+		"Mountain View High School - Band",
+		"St Thomas Aquinas Parish"
 	]
 }
