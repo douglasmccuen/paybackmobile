@@ -49,7 +49,7 @@ $(function() {
 		this.initMerchantList = function(speed) {
 			var baseUrl = "http://talool.com/fundraiser/payback/colorado/";
 			$(".merchant-list div").each(function(i){
-				var name = this.innerText;
+				var name = this.innerHTML;
 				var category = $(this).data('category');
 				var color, icon, elem;
 				if (category == 'food')
