@@ -29,7 +29,9 @@ a:hover {
   border: 1px solid #208896;
 }
 
-
+dd {
+	margin-bottom: 30px;
+}
 /*
  * Base structure
  */
