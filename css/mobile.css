@@ -59,3 +59,9 @@ body.android .apple
 	text-align: center;
 }
 
+dd {
+	margin: 0 0 30px;
+}
+dt {
+	font-weight: bold;
+}
