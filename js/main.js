@@ -44,7 +44,7 @@ $(function() {
 			// TODO fundraisers need to pulled apart by state
 			$.getJSON('http://dev-www.talool.com/api/merchants/publisher/17907b38-9ce4-4fcd-afff-85ac009b2117/fundraisers', function(data) {
 				var count = data.length;
-				alert("got talool data for "+count+" fundraisers.");
+				//alert("got talool data for "+count+" fundraisers.");
 			});
 			
 		};
@@ -56,7 +56,7 @@ $(function() {
 			// TODO each book has a different url
 			$.getJSON('http://dev-www.talool.com/api/merchants/book/1b3ec086-d697-4b67-9192-40c38a96b0e7', function(data) {
 				var count = data.length;
-				alert("got talool data for "+count+" merchants.");
+				//alert("got talool data for "+count+" merchants.");
 			});
 			
 			var baseUrl = "http://talool.com/fundraiser/payback/colorado/";
