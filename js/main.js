@@ -41,6 +41,11 @@ $(function() {
 				});
 			});
 			
+			$.getJSON('http://dev-www.talool.com/api/merchants/book/1b3ec086-d697-4b67-9192-40c38a96b0e7', function(data) {
+				var count = data.length();
+				alert("got talool data for "+count+" fundraiser.");
+			});
+			
 		};
 		
 		/*
