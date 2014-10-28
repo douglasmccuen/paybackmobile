@@ -71,7 +71,10 @@ body {
   font-weight: 700;
   font-size: 36px;
 }
-
+.masthead .inner .logo
+{
+	background: url(/img/logo.png) no-repeat 0px 0px;
+}
 .masthead-nav
 {
 	margin-top: 10px;
