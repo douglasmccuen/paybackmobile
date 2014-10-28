@@ -40,7 +40,6 @@ $(function() {
 					list.append(link);
 				});
 			});
-			
 		};
 		
 		/*
