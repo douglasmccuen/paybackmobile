@@ -74,6 +74,9 @@ body {
 .masthead .inner .logo
 {
 	background: url(/img/logo.png) no-repeat 0px 0px;
+	width: 400px;
+	height: 60px;
+	position: absolute;
 }
 .masthead-nav
 {
