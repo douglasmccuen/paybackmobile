@@ -40,13 +40,6 @@ $(function() {
 					list.append(link);
 				});
 			});
-			
-			// TODO fundraisers need to pulled apart by state
-			$.getJSON('http://dev-www.talool.com/api/merchants/publisher/17907b38-9ce4-4fcd-afff-85ac009b2117/fundraisers', function(data) {
-				var count = data.length;
-				//alert("got talool data for "+count+" fundraisers.");
-			});
-			
 		};
 		
 		/*
