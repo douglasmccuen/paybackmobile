@@ -15,7 +15,7 @@ $(function() {
 			{
 				if (cfg.method == this.method.merchantList)
 				{
-					this.initMerchantList(cfg.speed);
+					this.initMerchantList(cfg.id, cfg.speed);
 				}
 				else
 				{
@@ -44,48 +44,46 @@ $(function() {
 		
 		/*
 		 *	Turn the Merchant Names into list items.
+		 *  http://www.talool.com/api/merchants/book/1b3ec086-d697-4b67-9192-40c38a96b0e7
 		 */
-		this.initMerchantList = function(speed) {
-			// TODO each book has a different url
-			$.getJSON('http://dev-www.talool.com/api/merchants/book/1b3ec086-d697-4b67-9192-40c38a96b0e7', function(data) {
+		this.initMerchantList = function(id, speed) {
+            var url = "http://www.talool.com/api/merchants/book/"+id;
+            var list = $(".merchant-list");
+			$.getJSON(url, function(data) {
 				var count = data.length;
-				//alert("got talool data for "+count+" merchants.");
+                $(data).each(function(i,merchant){
+                    var color, icon, elem;
+                    if (merchant.category == 'Food')
+                    {
+                        color = "teal";
+                        icon = "food";
+                    }
+                    else if (merchant.category == 'Shopping Services')
+                    {
+                        color = "orange";
+                        icon = "shopping-cart";
+                    }
+                    else
+                    {
+                        color = "green";
+                        icon = "ticket";
+                    }
+                    elem = (i+1==count)?"<div id='last-item' class='list-item'>":"<div class='list-item'>";
+                    elem += "<div class='category'><div class='circle "+color+"-bg'><i class='icon icon-"+icon+"'></i></div></div>"
+                        + "<div class='title'>"+ merchant.name+"</div></div>";
+                    list.append(elem);
+                });
+                //console.log(list.html());
+
+                // start scrolling
+                var iSelector = "#last-item";
+                $(iSelector).animatescroll({element: '.merchant-list', scrollSpeed:speed, easing:'linear'});
+
+                var mSelector = ".merchant-list";
+                $(mSelector).mouseenter(function(){
+                    $(mSelector).stop(true);
+                });
 			});
-			
-			var baseUrl = "http://talool.com/fundraiser/payback/colorado/";
-			$(".merchant-list div").each(function(i){
-				var name = this.innerHTML;
-				var category = $(this).data('category');
-				var color, icon, elem;
-				if (category == 'food')
-				{
-					color = "teal";
-					icon = "food";
-				}
-				else if (category == 'shopping')
-				{
-					color = "orange";
-					icon = "shopping-cart";
-				}
-				else
-				{
-					color = "green";
-					icon = "ticket";
-				}
-				elem = "<div class='category'><div class='circle "+color+"-bg'><i class='icon icon-"+icon+"'></i></div></div>"
-					 + "<div class='title'>"+name+"</div>";
-				this.innerHTML = elem;
-				$(this).addClass("list-item");
-			});
-			
-			var mSelector = ".merchant-list";
-			var iSelector = "#last-item";
-			$(mSelector).toggleClass("hide");
-			$(iSelector).animatescroll({element: '.merchant-list', scrollSpeed:speed, easing:'linear'});
-			$(mSelector).mouseenter(function(){
-				$(mSelector).stop(true);
-			});
-			
 		}
 
 	};
